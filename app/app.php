@@ -1,6 +1,6 @@
 <?php
     require_once __DIR__."/../vendor/autoload.php";
-    require_once __DIR__."/../src/PingPongGenerator.php";
+    require_once __DIR__."/../src/LeetSpeakGenerator.php";
 
     $app = new Silex\Application();
 
@@ -12,11 +12,11 @@
         return $app['twig']->render('home.html.twig');
     });
 
-    $app->get("/results", function() use ($app) {
-        $my_PingPongGenerator = new PingPongGenerator;
-        $pingPongResult = $my_PingPongGenerator->makePingPong($_GET['input_number']);
-        return $app['twig']->render('results.html.twig', array('results'=>$pingPongResult));
-    });
+    // $app->get("/results", function() use ($app) {
+    //     $my_PingPongGenerator = new PingPongGenerator;
+    //     $pingPongResult = $my_PingPongGenerator->makePingPong($_GET['input_number']);
+    //     return $app['twig']->render('results.html.twig', array('results'=>$pingPongResult));
+    // });
 
     return $app;
 ?>
