@@ -14,7 +14,7 @@
             $result = $test_LeetSpeakGenerator->makeLeetSpeak($input);
 
             //Assert
-            $this->assertEquals("x", $result);
+            $this->assertEquals(["x"], $result);
         }
         function test_replaceE()
         {
@@ -26,7 +26,7 @@
             $result = $test_LeetSpeakGenerator->makeLeetSpeak($input);
 
             //Assert
-            $this->assertEquals("h3ll", $result);
+            $this->assertEquals(["h3ll"], $result);
         }
 
         function test_replaceO()
@@ -39,7 +39,7 @@
             $result = $test_LeetSpeakGenerator->makeLeetSpeak($input);
 
             //Assert
-            $this->assertEquals("h3ll0", $result);
+            $this->assertEquals(["h3ll0"], $result);
         }
 
         function test_replaceI()
@@ -52,20 +52,34 @@
             $result = $test_LeetSpeakGenerator->makeLeetSpeak($input);
 
             //Assert
-            $this->assertEquals("1c3", $result);
+            $this->assertEquals(["1c3"], $result);
         }
-        function test_replaceS()
-        {
-            //Arrange
-            $test_LeetSpeakGenerator = new LeetSpeakGenerator;
-            $input = "dogs";
 
-            //Act
-            $result = $test_LeetSpeakGenerator->makeLeetSpeak($input);
+        // function test_replaceS()
+        // {
+        //     //Arrange
+        //     $test_LeetSpeakGenerator = new LeetSpeakGenerator;
+        //     $input = "dogs";
+        //
+        //     //Act
+        //     $result = $test_LeetSpeakGenerator->makeLeetSpeak($input);
+        //
+        //     //Assert
+        //     $this->assertEquals(["d0gz"], $result);
+        // }
 
-            //Assert
-            $this->assertEquals("d0gz", $result);
-        }
+        // function test_replaceSpaceS()
+        // {
+        //     //Arrange
+        //     $test_LeetSpeakGenerator = new LeetSpeakGenerator;
+        //     $input = "dogs speak";
+        //
+        //     //Act
+        //     $result = $test_LeetSpeakGenerator->makeLeetSpeak($input);
+        //
+        //     //Assert
+        //     $this->assertEquals("d0gz sp3ak", $result);
+        // }
 
         // function test_returnMultpile()
         // {

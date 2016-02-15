@@ -4,18 +4,33 @@
     {
         function makeLeetSpeak($input)
         {
-            $output = '';
-            $output = str_replace("e", "3", $input);
-            $output = str_replace("o", "0", $output);
-            $output = str_replace("I", "1", $output);
-            $output = str_replace("s", "z", $output);
+            $input_array_of_words = explode(" ", $input);
+            $output_array = array();
+            foreach ($input_array_of_words as $word) {
+                $output = '';
+                $output = str_replace("e", "3", $word);
+                $output = str_replace("o", "0", $output);
+                $output = str_replace("I", "1", $output);
+                array_push($output_array, $output);
+            }
 
-            return $output;
+            // $output = str_replace("s", "z", $output);
+            // $output = str_replace(" z", " s", $output);
+            return $output_array;
         }
-
-
     }
 
+// input "somewhere over the rainbow"
+// array ["somewhere", "over", "the", "rainbow"]
+// changed ["s0m3wh3r3", ....]
+
+
+//
+// if ("s") {
+//     replace with z
+// } elseif (" s") {
+//     do nothing
+// }
 
 
     // class PingPongGenerator
