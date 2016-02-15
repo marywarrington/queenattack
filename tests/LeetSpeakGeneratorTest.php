@@ -54,6 +54,18 @@
             //Assert
             $this->assertEquals("1c3", $result);
         }
+        function test_replaceS()
+        {
+            //Arrange
+            $test_LeetSpeakGenerator = new LeetSpeakGenerator;
+            $input = "dogs";
+
+            //Act
+            $result = $test_LeetSpeakGenerator->makeLeetSpeak($input);
+
+            //Assert
+            $this->assertEquals("d0gz", $result);
+        }
 
         // function test_returnMultpile()
         // {
