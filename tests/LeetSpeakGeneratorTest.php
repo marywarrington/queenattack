@@ -20,13 +20,26 @@
         {
             //Arrange
             $test_LeetSpeakGenerator = new LeetSpeakGenerator;
+            $input = "hell";
+
+            //Act
+            $result = $test_LeetSpeakGenerator->makeLeetSpeak($input);
+
+            //Assert
+            $this->assertEquals("h3ll", $result);
+        }
+
+        function test_replaceO()
+        {
+            //Arrange
+            $test_LeetSpeakGenerator = new LeetSpeakGenerator;
             $input = "hello";
 
             //Act
             $result = $test_LeetSpeakGenerator->makeLeetSpeak($input);
 
             //Assert
-            $this->assertEquals("h3llo", $result);
+            $this->assertEquals("h3ll0", $result);
         }
 
         // function test_returnMultpile()
