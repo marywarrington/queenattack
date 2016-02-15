@@ -4,7 +4,7 @@
     {
         function makeLeetSpeak($input)
         {
-            
+            return $input;
         }
     }
 

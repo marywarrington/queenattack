@@ -4,17 +4,17 @@
 
     class LeetSpeakGeneratorTest extends PHPUnit_Framework_TestCase
     {
-        function test_returnOne()
+        function test_returnString()
         {
             //Arrange
-            $test_PingPongGenerator = new PingPongGenerator;
-            $input = 1;
+            $test_LeetSpeakGenerator = new LeetSpeakGenerator;
+            $input = "hello";
 
             //Act
-            $result = $test_PingPongGenerator->makePingPong($input);
+            $result = $test_LeetSpeakGenerator->makeLeetSpeak($input);
 
             //Assert
-            $this->assertEquals([1], $result);
+            $this->assertEquals("hello", $result);
         }
         // function test_returnMultpile()
         // {
