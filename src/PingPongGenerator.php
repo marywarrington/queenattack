@@ -11,34 +11,17 @@
                 array_push($pingPongArray, $i);
                 ++$i;
             }
-        return $pingPongArray;
 
+        $output_pingpong = array();
+        foreach ($pingPongArray as $number) {
+            if ($number % 3 == 0) {
+                array_push($output_pingpong, "ping");
+            } else {
+                array_push($output_pingpong, $number);
+            }
+        }
+        return $output_pingpong;
 
-
-
-
-
-
-
-
-
-            // $count_array = array();
-            // $i = 1;
-            // while ($i <= $input_number) {
-            //     array_push($count_array, $i);
-            //     ++$i;
-            // }
-            //
-            // $output_pingpong = array();
-            // foreach ($count_array as $number) {
-            //     if ($number % 3 == 0) {
-            //         return "ping ";
-            //     } else {
-            //         return $number . " ";
-            //     }
-            //     array_push($output_pingpong, $number);
-            // }
-            // return $output_pingpong;
         }
     }
 

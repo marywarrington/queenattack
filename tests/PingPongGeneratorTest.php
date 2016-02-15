@@ -14,19 +14,30 @@
             $result = $test_PingPongGenerator->makePingPong($input);
 
             //Assert
-            $this->assertEquals(array(1), $result);
+            $this->assertEquals([1], $result);
         }
         function test_returnMultpile()
         {
             //Arrange
             $test_PingPongGenerator = new PingPongGenerator;
-            $input = 5;
+            $input = 2;
 
             //Act
             $result = $test_PingPongGenerator->makePingPong($input);
 
             //Assert
-            $this->assertEquals(array(1, 2, 3, 4, 5), $result);
+            $this->assertEquals([1, 2], $result);
+        }
+        function test_replaceThree()
+        {
+            //Arrange
+            $test_PingPongGenerator = new PingPongGenerator;
+            $input = 4;
+            //Act
+            $result = $test_PingPongGenerator->makePingPong($input);
+
+            //Assert
+            $this->assertEquals([1, 2, "ping", 4], $result);
         }
 
 
