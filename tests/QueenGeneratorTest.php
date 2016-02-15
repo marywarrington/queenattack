@@ -9,12 +9,26 @@
             //Arrange
             $test_Queen = new Queen;
             $pieceX = 3;
+            $pieceY = 1;
 
             //Act
-            $result = $test_Queen->makeQueenAttack($pieceX);
+            $resultX = $test_Queen->makeQueenAttack($pieceX, $pieceY);
 
             //Assert
-            $this->assertEquals(true, $result);
+            $this->assertEquals(true, $resultX);
+        }
+        function test_findY()
+        {
+            //Arrange
+            $test_Queen = new Queen;
+            $pieceY = 3;
+            $pieceX = 7;
+
+            //Act
+            $resultY = $test_Queen->makeQueenAttack($pieceX, $pieceY);
+
+            //Assert
+            $this->assertEquals(true, $resultY);
         }
 
     }

@@ -2,10 +2,11 @@
 
     class Queen
     {
-        function makeQueenAttack($pieceX)
+        function makeQueenAttack($pieceX, $pieceY)
         {
             $queenX = 3;
-            if ($queenX == $pieceX) {
+            $queenY = 3;
+            if ($queenX == $pieceX || $queenY == $pieceY) {
                 return true;
             }
         }
