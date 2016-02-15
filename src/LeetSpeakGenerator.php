@@ -17,7 +17,9 @@
                 } else {
                     $letter_array = str_split($word);
                     $output_letters = array();
+                    //cuts position 0 letter off and puts it into $output_array
                     array_push($output_letters, $letter_array[0]);
+                    //slices off first letter in letters_array
                     array_shift($letter_array);
                     foreach ($letter_array as $letter) {
                         $output = '';
