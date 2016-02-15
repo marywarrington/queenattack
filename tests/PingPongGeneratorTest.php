@@ -39,6 +39,17 @@
             //Assert
             $this->assertEquals([1, 2, "ping", 4], $result);
         }
+        function test_replaceFive()
+        {
+            //Arrange
+            $test_PingPongGenerator = new PingPongGenerator;
+            $input = 5;
+            //Act
+            $result = $test_PingPongGenerator->makePingPong($input);
+
+            //Assert
+            $this->assertEquals([1, 2, "ping", 4, "pong"], $result);
+        }
 
 
     }

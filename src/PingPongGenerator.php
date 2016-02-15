@@ -16,6 +16,8 @@
         foreach ($pingPongArray as $number) {
             if ($number % 3 == 0) {
                 array_push($output_pingpong, "ping");
+            } elseif ($number % 5 == 0) {
+                array_push($output_pingpong, "pong");
             } else {
                 array_push($output_pingpong, $number);
             }
