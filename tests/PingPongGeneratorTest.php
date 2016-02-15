@@ -4,7 +4,7 @@
 
     class PingPongGeneratorTest extends PHPUnit_Framework_TestCase
     {
-        function test_makePingPongArray()
+        function test_returnOne()
         {
             //Arrange
             $test_PingPongGenerator = new PingPongGenerator;
@@ -15,6 +15,18 @@
 
             //Assert
             $this->assertEquals(array(1), $result);
+        }
+        function test_returnMultpile()
+        {
+            //Arrange
+            $test_PingPongGenerator = new PingPongGenerator;
+            $input = 5;
+
+            //Act
+            $result = $test_PingPongGenerator->makePingPong($input);
+
+            //Assert
+            $this->assertEquals(array(1, 2, 3, 4, 5), $result);
         }
 
 
