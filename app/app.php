@@ -12,11 +12,11 @@
         return $app['twig']->render('home.html.twig');
     });
 
-    // $app->get("/results", function() use ($app) {
-    //     $my_PingPongGenerator = new PingPongGenerator;
-    //     $pingPongResult = $my_PingPongGenerator->makePingPong($_GET['input_number']);
-    //     return $app['twig']->render('results.html.twig', array('results'=>$pingPongResult));
-    // });
+    $app->get("/results", function() use ($app) {
+        $my_LeetSpeakGenerator = new LeetSpeakGenerator;
+        $leetSpeakPhrase = $my_LeetSpeakGenerator->makeLeetSpeak($_GET['input_phrase']);
+        return $app['twig']->render('results.html.twig', array('results'=>$leetSpeakPhrase));
+    });
 
     return $app;
 ?>
