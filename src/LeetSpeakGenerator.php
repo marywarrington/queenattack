@@ -4,7 +4,7 @@
     {
         function makeLeetSpeak($input)
         {
-            return $input;
+            return str_replace("e", "3", $input);
         }
     }
 

@@ -8,14 +8,27 @@
         {
             //Arrange
             $test_LeetSpeakGenerator = new LeetSpeakGenerator;
+            $input = "x";
+
+            //Act
+            $result = $test_LeetSpeakGenerator->makeLeetSpeak($input);
+
+            //Assert
+            $this->assertEquals("x", $result);
+        }
+        function test_replaceE()
+        {
+            //Arrange
+            $test_LeetSpeakGenerator = new LeetSpeakGenerator;
             $input = "hello";
 
             //Act
             $result = $test_LeetSpeakGenerator->makeLeetSpeak($input);
 
             //Assert
-            $this->assertEquals("hello", $result);
+            $this->assertEquals("h3llo", $result);
         }
+
         // function test_returnMultpile()
         // {
         //     //Arrange
