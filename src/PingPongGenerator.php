@@ -14,7 +14,9 @@
 
         $output_pingpong = array();
         foreach ($pingPongArray as $number) {
-            if ($number % 3 == 0) {
+            if ($number % 15 == 0) {
+                array_push($output_pingpong, "pingpong");
+            } elseif ($number % 3 == 0) {
                 array_push($output_pingpong, "ping");
             } elseif ($number % 5 == 0) {
                 array_push($output_pingpong, "pong");

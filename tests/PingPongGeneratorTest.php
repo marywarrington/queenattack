@@ -50,23 +50,19 @@
             //Assert
             $this->assertEquals([1, 2, "ping", 4, "pong"], $result);
         }
+        function test_replaceFifteen()
+        {
+            //Arrange
+            $test_PingPongGenerator = new PingPongGenerator;
+            $input = 15;
+            //Act
+            $result = $test_PingPongGenerator->makePingPong($input);
+
+            //Assert
+            $this->assertEquals([1, 2, "ping", 4, "pong", "ping", 7, 8, "ping", "pong", 11, "ping", 13, 14, "pingpong"], $result);
+        }
 
 
     }
-
-
-
-        // function test_makePingPong_three()
-        // {
-        //     //Arrange
-        //     $test_PingPongGenerator = new PingPongGenerator;
-        //     $input = 4;
-        //     //Act
-        //     $result = $test_PingPongGenerator->makePingPong($input);
-        //     //Assert
-        //     $this->assertEquals("1 2 ping 4 ", $result);
-        // }
-
-
 
 ?>
