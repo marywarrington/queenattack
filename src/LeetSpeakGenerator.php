@@ -7,6 +7,7 @@
             $output = '';
             $output = str_replace("e", "3", $input);
             $output = str_replace("o", "0", $output);
+            $output = str_replace("I", "1", $output);
             return $output;
         }
 
