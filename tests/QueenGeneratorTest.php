@@ -17,6 +17,7 @@
             //Assert
             $this->assertEquals(true, $resultX);
         }
+
         function test_findY()
         {
             //Arrange
@@ -31,6 +32,19 @@
             $this->assertEquals(true, $resultY);
         }
 
+        function test_diag()
+        {
+            //Arrange
+            $test_Queen = new Queen;
+            $pieceY = 5;
+            $pieceX = 5;
+
+            //Act
+            $results = $test_Queen->makeQueenAttack($pieceX, $pieceY);
+
+            //Assert
+            $this->assertEquals(true, $results);
+        }
     }
 
 ?>
